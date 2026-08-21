@@ -1,7 +1,7 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset=<!"UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog pessoal</title>
     <style>
@@ -11,19 +11,48 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-
         
         .caixa-vermelha {
             background-color: red;
             color: white;
             padding: 70px;
             text-align: center;
-            border-radius: 30px; /
+            border-radius: 30px;
+        }
+
+        /* Classe para centralizar e estilizar o texto */
+        .container-texto {
+            max-width: 800px;     
+            margin: 0 auto;       
+            padding: 20px;        
+            line-height: 1.6;     
+            text-align: center;   
+        }
+
+        .container-texto h2 {
+            color: #ffffff;
+            margin-top: 30px;
+        }
+
+        .container-texto p {
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para centralizar a imagem */
+        .centralizar-img {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-
 
     <header class="caixa-vermelha">
         <h1 style="margin: 0; font-size: 40px;">Meu Primeiro Blog</h1>
@@ -33,13 +62,24 @@
     <!-- Conteúdo principal -->
     <main style="margin-top: 20px;">
         <p style="text-align: center; padding: 0 40px; max-width: 800px; margin: 0 auto;">
-            <strong>Nesse blog quero contar a experiência com criptopalavra
+            <strong>Nesse blog quero falar sobre as criptopalavras.</strong>
+        </p>
     </main>
     
+    <!-- Imagem centralizada -->
+    <div class="centralizar-img">
+        <img src="cripto.jpeg" alt="Imagem de um caça-palavras temático de criptomoedas com termos em destaque, ideal para testar conhecimentos sobre o mercado cripto de forma divertida.">
+    </div>
+
     <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
-        <h2 style="margin-top: 0;">Bem-vindo ao Blog das Criptopalavras! 🧩</h2>
-        
-        <p>
-            Este é o meu primeiro blog e o ponto de encontro perfeito para quem ama um bom desafio mental, 
-            Aqui você vai encontrar jogos de caça-palavras temáticos para exercitar o cérebro, testar seus 
-            conhecimentos e passar o tempo de forma divertida.
+        <div class="container-texto">
+            <h2 style="margin-top: 0;">Bem-vindo ao Blog das Criptopalavras!</h2>
+            
+            <h2>O que são Cripto-Palavras?</h2>
+            <p>Se você é apaixonado por tecnologia, investimentos ou simplesmente adora um bom desafio mental, provavelmente já cruzou com o termo cripto-palavras. Mas afinal, o que são esses passatempos que estão conquistando a comunidade digital?</p>
+            <p>Misturando o universo dos jogos tradicionais de caça-palavras com a revolução financeira do século XXI, as cripto-palavras são passatempos temáticos focados no ecossistema das criptomoedas, da tecnologia blockchain e da Web3.</p>
+        </div>
+    </section>
+
+</body>
+</html>
