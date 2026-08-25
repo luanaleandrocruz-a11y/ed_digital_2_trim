@@ -15,12 +15,43 @@
         .caixa-vermelha {
             background-color: red;
             color: white;
-            padding: 70px;
+            padding: 50px 20px;
             text-align: center;
             border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-    
+        /* Container para organizar os três botões lado a lado */
+        .container-botoes {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Estilo para os botões de reação */
+        .btn-curtir {
+            background-color: #ffffff;
+            color: #2253ad;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.1s ease;
+        }
+
+        .btn-curtir:active {
+            transform: scale(0.95);
+        }
+
         .container-texto {
             max-width: 800px;     
             margin: 0 auto;       
@@ -38,7 +69,6 @@
             margin-bottom: 15px;
         }
 
-        /* Estilo para centralizar a imagem */
         .centralizar-img {
             display: flex;
             justify-content: center;
@@ -51,7 +81,6 @@
             border-radius: 10px;
         }
 
-        
         .caixa-jogo {
             background-color: #112d60;
             padding: 15px;
@@ -68,20 +97,24 @@
 
     <header class="caixa-vermelha">
         <h1 style="margin: 0; font-size: 40px;">Meu Primeiro Blog</h1>
-        <h2 style="margin-top: 10px; font-weight: normal;">Apresentação Inicial!</h2>
+        <h2 style="margin: 0; font-weight: normal;">Apresentação Inicial!</h2>
+        
+        <!-- Três botões de reação lado a lado -->
+        <div class="container-botoes">
+            <button class="btn-curtir">❤️ <span>0</span></button>
+            <button class="btn-curtir">👍 <span>0</span></button>
+            <button class="btn-curtir">😮 <span>0</span></button>
+        </div>
     </header>
 
-    
     <main style="margin-top: 20px;">
         <p style="text-align: center; padding: 0 40px; max-width: 800px; margin: 0 auto;">
             <strong>Nesse blog quero falar sobre as criptopalavras.</strong>
         </p>
         
-    
         <div class="centralizar-img">
             <img src="cripto.jpeg" alt="Imagem de um caça-palavras temático de criptomoedas com termos em destaque.">
         </div>
-
 
         <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
             <div class="container-texto">
@@ -92,7 +125,6 @@
                 <p>Misturando o universo dos jogos tradicionais de caça-palavras com a revolução financeira do século XXI, as cripto-palavras são passatempos temáticos focados no ecossistema das criptomoedas, da tecnologia blockchain e da Web3.</p>
             </div>
         </section>
-
 
         <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
             <div class="container-texto">
@@ -105,7 +137,6 @@
                 <p>Além de acelerar o aprendizado, os jogos mentais ajudam a melhorar a concentração, reduzem o estresse do dia a dia e estimulam a agilidade cognitiva. É diversão e conhecimento andando de mãos dadas!</p>
             </div>
         </section>
-
 
         <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
             <div class="container-texto">
@@ -121,7 +152,6 @@ G H C O I N P Q R
             </div>
         </section>
 
-        <!-- POST 2: Dicas -->
         <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
             <div class="container-texto">
                 <h2 style="margin-top: 0;">Dicas Rápidas para Encontrar Palavras Mais Rápido</h2>
@@ -132,7 +162,6 @@ G H C O I N P Q R
             </div>
         </section>
 
-        <!-- POST 3: Curiosidade -->
         <section style="background-color: #1b3d7a; padding: 20px; border-radius: 8px; margin-top: 20px;">
             <div class="container-texto">
                 <h2 style="margin-top: 0;">Curiosidade</h2>
@@ -142,6 +171,18 @@ G H C O I N P Q R
         </section>
 
     </main>
+
+    <!-- Script JavaScript para fazer todos os botões funcionarem de forma independente -->
+    <script>
+        const botoes = document.querySelectorAll(".btn-curtir");
+
+        botoes.forEach(function(botao) {
+            botao.addEventListener("click", function() {
+                let texto = botao.querySelector("span");
+                texto.textContent++;
+            });
+        });
+    </script>
 
 </body>
 </html>
